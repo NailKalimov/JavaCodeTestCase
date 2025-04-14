@@ -26,9 +26,3 @@ class OperationSerializer(serializers.ModelSerializer):
         if value <= 0:
             raise serializers.ValidationError("Amount must be greater than 0.")
         return value
-
-
-    # def create(self, validated_data):
-    #     op_type = validated_data.pop('operation_type')
-    #     validated_data['operation'] = op_type
-    #     return Operation.objects.create(**validated_data)
