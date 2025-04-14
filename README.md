@@ -19,9 +19,9 @@ git clone https://github.com/NailKalimov/JavaCodeTestCase.git
 сd JavaCodeTestCase
 ```
 
-Поднимаем приложение через Docker-Compose
+Поднимаем приложение через Docker-Compose. При первом запуске используем docker-compose_firststart
 ```
-docker-compose up
+docker compose -f docker-compose_firststart.yml up
 ```
 <p>При этом автоматически пройдут миграции в БД, создастся Django-superuser с учетными данными из .env-файла и запустится сервер на 8000 порту</p>
 
