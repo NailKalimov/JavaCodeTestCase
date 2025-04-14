@@ -6,7 +6,7 @@ services:
             - .env
         ports:
             - "8000:8000"
-        command: "python manage.py runserver 0.0.0.0:8000"
+        command: bash -c "python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py createsuperuser --noinput && python manage.py runserver 0.0.0.0:8000"
         volumes:
             - ./bank-drf:/app/bank-drf
         depends_on:
@@ -23,4 +23,4 @@ services:
             - pgdbdata:/var/lib/postgresql/data/
 
 volumes:
-  pgdbdata: null
+    pgdbdata: null
