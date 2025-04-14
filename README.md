@@ -11,17 +11,17 @@
   ## Запуск на локальной машине
 Клонируем репозиторий:
 ```
-~ git clone https://github.com/NailKalimov/JavaCodeTestCase.git
+git clone https://github.com/NailKalimov/JavaCodeTestCase.git
 ```
 
 Далее переходим в папку с проектом
 ```
-~ сd JavaCodeTestCase
+сd JavaCodeTestCase
 ```
 
 Поднимаем приложение через Docker-Compose
 ```
-~ docker-compose up
+docker-compose up
 ```
 <p>При этом автоматически пройдут миграции в БД, создастся Django-superuser с учетными данными из .env-файла и запустится сервер на 8000 порту</p>
 
