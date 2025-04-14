@@ -48,3 +48,9 @@ class wallet_detail(generics.RetrieveAPIView):
     def get(self, request, *args, **kwargs):
         time.sleep(1)
         return super().get(request, *args, **kwargs)
+
+
+class wallets_view(generics.ListAPIView):
+    model = Wallet
+    serializer_class = WalletSerializer
+    queryset = Wallet.objects.all()
